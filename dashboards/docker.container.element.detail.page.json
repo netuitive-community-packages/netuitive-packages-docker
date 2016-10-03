@@ -190,7 +190,7 @@
       "created" : "2016-10-03T17:52:06Z",
       "updated" : "2016-10-03T17:52:06Z"
     } ],
-    "type" : "DEFAULT",
+    "type" : "DOCKER CONTAINER",
     "private" : false
   }
 }

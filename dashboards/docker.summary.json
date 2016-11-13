@@ -16,34 +16,6 @@
     "created" : "2016-11-11T15:35:06Z",
     "updated" : "2016-11-12T04:06:48Z",
     "widgets" : [ {
-      "id" : "0bad00cb-3a6a-4e32-90dc-8885b222c156",
-      "name" : "Docker Hosts",
-      "description" : null,
-      "widgetType" : "group-event-summary",
-      "properties" : {
-        "showElementTotal" : "true",
-        "selectedAttributes" : "[]",
-        "elementScopeTags" : "[]",
-        "useElementNameContains" : "true",
-        "useAllElementScopeTags" : "true",
-        "elementScopeTypes" : "[]",
-        "metricLimit" : "10",
-        "useAllMetricScopeTags" : "true",
-        "metricAggs" : "[]",
-        "elementScopeIds" : "[]",
-        "elementScopeAttributes" : "[{\"name\":\"docker_Os\",\"value\":\"linux\"}]",
-        "groupName" : "Event Summary",
-        "showHighest" : "true",
-        "metricScopeTags" : "[]",
-        "width" : "small",
-        "metrics" : "[]",
-        "selectedTab" : "table"
-      },
-      "dashboardId" : null,
-      "userId" : null,
-      "created" : "2016-11-11T16:32:27Z",
-      "updated" : "2016-11-11T16:34:17Z"
-    }, {
       "id" : "a76496ae-7dce-46e1-adb6-e8d3c1626e36",
       "name" : "Docker Hosts (Container Details)",
       "description" : null,
@@ -70,6 +42,34 @@
       "userId" : null,
       "created" : "2016-11-12T03:27:02Z",
       "updated" : "2016-11-12T03:42:34Z"
+    }, {
+      "id" : "0bad00cb-3a6a-4e32-90dc-8885b222c156",
+      "name" : "Docker Host Events",
+      "description" : null,
+      "widgetType" : "group-event-summary",
+      "properties" : {
+        "showElementTotal" : "true",
+        "selectedAttributes" : "[]",
+        "elementScopeTags" : "[]",
+        "useElementNameContains" : "true",
+        "useAllElementScopeTags" : "true",
+        "elementScopeTypes" : "[]",
+        "metricLimit" : "10",
+        "useAllMetricScopeTags" : "true",
+        "metricAggs" : "[]",
+        "elementScopeIds" : "[]",
+        "elementScopeAttributes" : "[{\"name\":\"docker_Os\",\"value\":\"linux\"}]",
+        "groupName" : "Event Summary",
+        "showHighest" : "true",
+        "metricScopeTags" : "[]",
+        "width" : "small",
+        "metrics" : "[]",
+        "selectedTab" : "table"
+      },
+      "dashboardId" : null,
+      "userId" : null,
+      "created" : "2016-11-11T16:32:27Z",
+      "updated" : "2016-11-13T01:25:11Z"
     }, {
       "id" : "700616f9-627b-45e6-ba5b-23584a2491c7",
       "name" : "Containers with Highest CPU Usage",
@@ -187,7 +187,7 @@
       "updated" : "2016-11-12T01:09:09Z"
     }, {
       "id" : "f504e0bd-110c-4bc2-9635-1f2d18f607b6",
-      "name" : "Docker Containers",
+      "name" : "Docker Container Events",
       "description" : null,
       "widgetType" : "group-event-summary",
       "properties" : {
@@ -212,7 +212,7 @@
       "dashboardId" : null,
       "userId" : null,
       "created" : "2016-11-11T16:33:16Z",
-      "updated" : "2016-11-11T16:34:21Z"
+      "updated" : "2016-11-13T01:25:27Z"
     }, {
       "id" : "30c957fb-e04f-4790-89eb-5269bb112f9b",
       "name" : "Docker Hosts with Highest Memory Usage",

@@ -1,8 +1,12 @@
-#netuitive.packages.docker 1.0.3
+#netuitive.packages.docker 1.0.4
 
 For detailed information on this package, please refer to the [online documentation](https://help.netuitive.com/Content/Datasources/Netuitive/docker_container_netuitive_agent.htm).
 
 ##Release History
+
+###Version 1.0.4
+
+* Bug fix to summary dashboard.
 
 ###Version 1.0.3
 

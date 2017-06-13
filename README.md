@@ -1,8 +1,12 @@
-# netuitive.packages.docker 1.1.0
+# netuitive.packages.docker
 
 For detailed information on this package, please refer to the [online documentation](https://help.netuitive.com/Content/Integrations/docker.htm).
 
 ## Release History
+
+### Version 1.1.1
+
+* Remove network widget which uses invalid widgets
 
 ### Version 1.1.0
 

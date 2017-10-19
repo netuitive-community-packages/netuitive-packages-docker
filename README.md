@@ -4,6 +4,10 @@ For detailed information on this package, please refer to the [online documentat
 
 ## Release History
 
+### Version 1.2.0
+
+* Updating Element Detail dashboard layout
+
 ### Version 1.1.1
 
 * Remove network widget which uses invalid widgets

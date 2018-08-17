@@ -1,71 +1,74 @@
 {
-  "analyticConfiguration" : {
-    "tenantId" : null,
-    "type" : "METRIC_META",
-    "id" : null,
-    "packageId" : null,
-    "name" : "Docker Container",
-    "scope" : {
-      "elementName" : null,
-      "elementType" : "Docker Container",
-      "elementTags" : null,
-      "metricMatches" : null
+  "analyticConfiguration": {
+    "metrics": [
+      {
+        "match": "^(cpu\\..*|network\\..*|memory\\..*(?:pgpgin|pgpgout))$",
+        "properties": {
+          "type": "COUNTER"
+        }
+      },
+      {
+        "match": "cpu\\.(.*cpu_usage.*|throttling_data.throttled_time)$",
+        "properties": {
+          "tags": {
+            "unit": "ns"
+          }
+        }
+      },
+      {
+        "match": "cpu\\.throttling_data\\..*periods$",
+        "properties": {
+          "tags": {
+            "unit": "count"
+          }
+        }
+      },
+      {
+        "match": "memory\\.(?!failcnt).*",
+        "properties": {
+          "tags": {
+            "unit": "bytes"
+          }
+        }
+      },
+      {
+        "match": "memory.failcnt",
+        "properties": {
+          "tags": {
+            "unit": "count"
+          }
+        }
+      },
+      {
+        "match": "network\\..*_bytes",
+        "properties": {
+          "tags": {
+            "unit": "bytes"
+          }
+        }
+      },
+      {
+        "match": "network\\..*(?!_bytes)",
+        "properties": {
+          "tags": {
+            "unit": "count"
+          }
+        }
+      },
+      {
+        "match": "netuitive.docker\\..*percent",
+        "properties": {
+          "tags": {
+            "unit": "percent"
+          },
+          "validMax": 100
+        }
+      }
+    ],
+    "name": "Docker Container",
+    "scope": {
+      "elementType": "Docker Container"
     },
-    "metrics" : [ {
-      "match" : "^(cpu\\..*|network\\..*|memory\\..*(?:pgpgin|pgpgout))$",
-      "properties" : {
-        "type" : "COUNTER"
-      }
-    }, {
-      "match" : "cpu\\.(.*cpu_usage.*|throttling_data.throttled_time)$",
-      "properties" : {
-        "tags" : {
-          "unit" : "ns"
-        }
-      }
-    }, {
-      "match" : "cpu\\.throttling_data\\..*periods$",
-      "properties" : {
-        "tags" : {
-          "unit" : "count"
-        }
-      }
-    }, {
-      "match" : "memory\\.(?!failcnt).*",
-      "properties" : {
-        "tags" : {
-          "unit" : "bytes"
-        }
-      }
-    }, {
-      "match" : "memory.failcnt",
-      "properties" : {
-        "tags" : {
-          "unit" : "count"
-        }
-      }
-    }, {
-      "match" : "network\\..*_bytes",
-      "properties" : {
-        "tags" : {
-          "unit" : "bytes"
-        }
-      }
-    }, {
-      "match" : "network\\..*(?!_bytes)",
-      "properties" : {
-        "tags" : {
-          "unit" : "count"
-        }
-      }
-    }, {
-      "match" : "netuitive.docker\\..*percent",
-      "properties" : {
-        "tags" : {
-          "unit" : "percent"
-        },
-        "validMax" : 100
-      }
-    } ]
+    "type": "METRIC_META"
   }
 }

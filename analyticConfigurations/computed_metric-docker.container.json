@@ -1,37 +1,35 @@
 {
-  "analyticConfiguration" : {
-    "tenantId" : null,
-    "type" : "COMPUTED_METRIC",
-    "id" : null,
-    "packageId" : null,
-    "name" : "Docker Container",
-    "scope" : {
-      "elementName" : null,
-      "elementType" : "Docker Container",
-      "elementTags" : null,
-      "metricMatches" : null
+  "analyticConfiguration": {
+    "metrics": [
+      {
+        "match": "netuitive.docker.cpu.container_cpu_percent",
+        "properties": {
+          "expression": "data['cpu.system_cpu_usage'].actual == 0 ? 0 : (data['cpu.cpu_usage.total_usage'].actual / data['cpu.system_cpu_usage'].actual) * 100",
+          "fqn": "netuitive.docker.cpu.container_cpu_percent",
+          "name": "Container CPU Percent"
+        }
+      },
+      {
+        "match": "netuitive.docker.memory.container_memory_percent",
+        "properties": {
+          "expression": "(data['memory.usage'].actual / data['memory.limit'].actual) * 100",
+          "fqn": "netuitive.docker.memory.container_memory_percent",
+          "name": "Container Memory Percent"
+        }
+      },
+      {
+        "match": "netuitive.docker.cpu.container_throttling_percent",
+        "properties": {
+          "expression": "data['cpu.throttling_data.periods'].actual == 0 ? 0 : (data['cpu.throttling_data.throttled_periods'].actual / data['cpu.throttling_data.periods'].actual) * 100",
+          "fqn": "netuitive.docker.cpu.container_throttling_percent",
+          "name": "Container Throttling Percent"
+        }
+      }
+    ],
+    "name": "Docker Container",
+    "scope": {
+      "elementType": "Docker Container"
     },
-    "metrics" : [ {
-      "match" : "netuitive.docker.cpu.container_cpu_percent",
-      "properties" : {
-        "expression" : "data['cpu.system_cpu_usage'].actual == 0 ? 0 : (data['cpu.cpu_usage.total_usage'].actual / data['cpu.system_cpu_usage'].actual) * 100",
-        "fqn" : "netuitive.docker.cpu.container_cpu_percent",
-        "name" : "Container CPU Percent"
-      }
-    }, {
-      "match" : "netuitive.docker.memory.container_memory_percent",
-      "properties" : {
-        "expression" : "(data['memory.usage'].actual / data['memory.limit'].actual) * 100",
-        "fqn" : "netuitive.docker.memory.container_memory_percent",
-        "name" : "Container Memory Percent"
-      }
-    }, {
-      "match" : "netuitive.docker.cpu.container_throttling_percent",
-      "properties" : {
-        "expression" : "data['cpu.throttling_data.periods'].actual == 0 ? 0 : (data['cpu.throttling_data.throttled_periods'].actual / data['cpu.throttling_data.periods'].actual) * 100",
-        "fqn" : "netuitive.docker.cpu.container_throttling_percent",
-        "name" : "Container Throttling Percent"
-      }
-    } ]
+    "type": "COMPUTED_METRIC"
   }
 }

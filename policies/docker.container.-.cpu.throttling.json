@@ -1,38 +1,26 @@
 {
-  "policy" : {
-    "id" : null,
-    "name" : "Docker Container - CPU Throttling",
-    "description" : "The Docker container has had its CPU usage throttled for at least the past 15 minutes.",
-    "scope" : {
-      "elementName" : null,
-      "elementNameExclude" : null,
-      "fqnIncludes" : [ ],
-      "fqnExcludes" : [ ],
-      "elementType" : "Docker Container",
-      "elementTags" : { }
-    },
-    "duration" : 900,
-    "conditions" : [ {
-      "metric" : "netuitive.docker.cpu.container_throttling_percent",
-      "wildcard" : null,
-      "metricScopeTags" : { },
-      "analytic" : "actual",
-      "operator" : ">",
-      "level" : 0.0,
-      "level2" : null,
-      "metricThresholdLevel" : null,
-      "metricThresholdAnalytic" : null
-    } ],
-    "eventConditions" : [ ],
-    "actions" : [ {
-      "type" : "event",
-      "category" : 2
-    } ],
-    "enabled" : true,
-    "deleted" : false,
-    "originTenantId" : null,
-    "originPolicyId" : null,
-    "creatorEmail" : null,
-    "lastUpdated" : null
+  "policy": {
+    "actions": [
+      {
+        "category": 2,
+        "type": "event"
+      }
+    ],
+    "conditions": [
+      {
+        "analytic": "actual",
+        "level": 0,
+        "metric": "netuitive.docker.cpu.container_throttling_percent",
+        "operator": ">"
+      }
+    ],
+    "deleted": false,
+    "description": "The Docker container has had its CPU usage throttled for at least the past 15 minutes.",
+    "duration": 900,
+    "enabled": true,
+    "name": "Docker Container - CPU Throttling",
+    "scope": {
+      "elementType": "Docker Container"
+    }
   }
 }

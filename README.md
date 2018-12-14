@@ -4,6 +4,13 @@ For detailed information on this package, please refer to the [online documentat
 
 ## Release History
 
+### Version next
+
+### Version 1.3.0
+
+* Fixed Network Bytes Sent and Received widget metrics scope
+* Adjusted build to use metricly-cli for validation
+
 ### Version 1.2.0
 
 * Updating Element Detail dashboard layout

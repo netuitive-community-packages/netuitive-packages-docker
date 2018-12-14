@@ -1,58 +1,60 @@
 {
-  "analyticConfiguration" : {
-    "tenantId" : null,
-    "type" : "ACE",
-    "id" : null,
-    "packageId" : null,
-    "name" : "Docker Container",
-    "scope" : {
-      "elementName" : null,
-      "elementType" : "Docker Container",
-      "elementTags" : null,
-      "metricMatches" : null
+  "analyticConfiguration": {
+    "metrics": [
+      {
+        "match": "cpu.throttling_data.*",
+        "properties": {
+          "baseline": false,
+          "correlation": false
+        }
+      },
+      {
+        "match": "memory.(?:failcnt|limit|max_usage)",
+        "properties": {
+          "baseline": false,
+          "correlation": false
+        }
+      },
+      {
+        "match": "memory\\.(?:.*active_file|.*cache|hier.*|.*inactive.*|.*mapped.*|.*swap|.*unevictable)",
+        "properties": {
+          "baseline": false,
+          "correlation": false
+        }
+      },
+      {
+        "match": "network\\.(?:.*dropped|.*errors)",
+        "properties": {
+          "baseline": false,
+          "correlation": false
+        }
+      },
+      {
+        "match": "netuitive\\..*",
+        "properties": {
+          "baseline": true,
+          "correlation": true
+        }
+      },
+      {
+        "match": "network\\..*bytes",
+        "properties": {
+          "baseline": true,
+          "correlation": true
+        }
+      },
+      {
+        "match": "memory\\.stats\\.(?:total_pgpgin|total_pgpgout|total_rss)",
+        "properties": {
+          "baseline": true,
+          "correlation": true
+        }
+      }
+    ],
+    "name": "Docker Container",
+    "scope": {
+      "elementType": "Docker Container"
     },
-    "metrics" : [ {
-      "match" : "cpu.throttling_data.*",
-      "properties" : {
-        "baseline" : false,
-        "correlation" : false
-      }
-    }, {
-      "match" : "memory.(?:failcnt|limit|max_usage)",
-      "properties" : {
-        "baseline" : false,
-        "correlation" : false
-      }
-    }, {
-      "match" : "memory\\.(?:.*active_file|.*cache|hier.*|.*inactive.*|.*mapped.*|.*swap|.*unevictable)",
-      "properties" : {
-        "baseline" : false,
-        "correlation" : false
-      }
-    }, {
-      "match" : "network\\.(?:.*dropped|.*errors)",
-      "properties" : {
-        "baseline" : false,
-        "correlation" : false
-      }
-    }, {
-      "match" : "netuitive\\..*",
-      "properties" : {
-        "baseline" : true,
-        "correlation" : true
-      }
-    }, {
-      "match" : "network\\..*bytes",
-      "properties" : {
-        "baseline" : true,
-        "correlation" : true
-      }
-    }, {
-      "match" : "memory\\.stats\\.(?:total_pgpgin|total_pgpgout|total_rss)",
-      "properties" : {
-        "baseline" : true,
-        "correlation" : true
-      }
-    } ]
+    "type": "ACE"
   }
 }

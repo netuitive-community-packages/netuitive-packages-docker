@@ -94,18 +94,26 @@
         "id": "435a4af0-dd92-45e8-914f-95b2b89c35d0",
         "name": "Network Bytes Sent and Received",
         "properties": {
+          "colorByMetric": "false",
           "elementScopeTypes": "[\"Docker Container\"]",
+          "groupByPolicy": "false",
+          "grouping": "attribute=SERVICE",
+          "metricAgg": "avg",
           "metricLimit": "10",
-          "metrics": "[{\"fqn\":\"network.rx_bytes\",\"aggFns\":[]},{\"fqn\":\"network.tx_bytes\",\"aggFns\":[]}]",
-          "selectedTab": "table",
+          "metrics": "[{\"fqn\":\"network.*rx_bytes\",\"useRegex\":true,\"aggFns\":[],\"aggFn\":null,\"groupAggFn\":null,\"aggregationGroups\":[]},{\"fqn\":\"network.*tx_bytes\",\"useRegex\":true,\"aggFns\":[],\"aggFn\":null,\"groupAggFn\":null,\"aggregationGroups\":[]}]",
+          "notificationPeriod": "off",
+          "period": "latest1",
+          "showBands": "true",
           "showElementTotal": "true",
           "showHighest": "true",
+          "tableColumns": "[{\"columnType\":\"elementType\",\"width\":\"10%\"},{\"columnType\":\"elementName\",\"width\":\"80%\"},{\"columnType\":\"metric\",\"width\":\"10%\",\"metricDisplayName\":null,\"metricFqn\":null,\"metricAggFn\":null,\"metricAgg\":null,\"metricUnit\":null}]",
+          "topNLimit": "5",
+          "useAllElementScopeAttributes": "true",
           "useAllElementScopeTags": "true",
           "useAllMetricScopeTags": "true",
-          "useElementNameContains": "true",
-          "width": "auto"
+          "visualization": "line"
         },
-        "widgetType": "multi-metric-time-series"
+        "widgetType": "multi-metric"
       }
     ]
   }

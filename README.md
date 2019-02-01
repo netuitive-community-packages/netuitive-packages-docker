@@ -6,6 +6,8 @@ For detailed information on this package, please refer to the [online documentat
 
 ### Version next
 
+* Convert computed metrics to new format
+
 ### Version 1.3.0
 
 * Fixed Network Bytes Sent and Received widget metrics scope

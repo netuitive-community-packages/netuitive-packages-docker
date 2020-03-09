@@ -24,7 +24,9 @@
     "enabled": true,
     "name": "Docker Container - Elevated CPU Utilization",
     "scope": {
-      "elementType": "Docker Container"
+      "elementTypes": [
+        "Docker Container"
+      ]
     }
   }
 }

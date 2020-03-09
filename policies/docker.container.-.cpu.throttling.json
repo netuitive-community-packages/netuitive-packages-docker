@@ -20,7 +20,9 @@
     "enabled": true,
     "name": "Docker Container - CPU Throttling",
     "scope": {
-      "elementType": "Docker Container"
+      "elementTypes": [
+        "Docker Container"
+      ]
     }
   }
 }

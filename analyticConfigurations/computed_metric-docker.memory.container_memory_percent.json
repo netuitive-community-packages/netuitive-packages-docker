@@ -13,7 +13,7 @@
         }
       }
     ],
-    "name": "Docker Container",
+    "name": "Docker Container Memory Percent",
     "scope": {
       "elementType": "Docker Container",
       "metricMatches": "memory.usage"

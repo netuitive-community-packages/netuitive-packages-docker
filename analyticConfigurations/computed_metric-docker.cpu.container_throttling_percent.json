@@ -13,7 +13,7 @@
         }
       }
     ],
-    "name": "Docker Container",
+    "name": "Docker Container CPU Throttling Percent",
     "scope": {
       "elementType": "Docker Container",
       "metricMatches": "cpu.throttling_data.throttled_periods"

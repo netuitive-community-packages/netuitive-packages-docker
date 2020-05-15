@@ -52,12 +52,14 @@
       "file" : "analyticConfigurations/computed_metric-docker.cpu.container_cpu_percent.json",
       "encoding" : "application/json",
       "content" : null
-    }, {
+    }
+  }, {
     "data" : {
       "file" : "analyticConfigurations/computed_metric-docker.memory.container_memory_percent.json",
       "encoding" : "application/json",
       "content" : null
-    }, {
+    }
+  }, {
     "data" : {
       "file" : "analyticConfigurations/computed_metric-docker.cpu.container_throttling_percent.json",
       "encoding" : "application/json",

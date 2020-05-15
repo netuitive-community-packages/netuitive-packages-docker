@@ -1,0 +1,23 @@
+{
+  "analyticConfiguration": {
+    "metrics": [
+      {
+        "match": "netuitive.docker.cpu.container_throttling_percent",
+        "properties": {
+          "expressions": [
+            "100 * (${cpu.throttling_data.throttled_periods}.actual / ${cpu.throttling_data.periods}.actual)",
+            "0"
+          ],
+          "fqn": "netuitive.docker.cpu.container_throttling_percent",
+          "name": "Container Throttling Percent"
+        }
+      }
+    ],
+    "name": "Docker Container",
+    "scope": {
+      "elementType": "Docker Container",
+      "metricMatches": "cpu.throttling_data.throttled_periods"
+    },
+    "type": "COMPUTED_METRIC"
+  }
+}

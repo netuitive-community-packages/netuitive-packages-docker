@@ -1,0 +1,24 @@
+{
+  "analyticConfiguration": {
+    "metrics": [
+      {
+        "match": "netuitive.docker.cpu.container_cpu_percent",
+        "properties": {
+          "expressions": [
+            "100 * (${cpu.cpu_usage.total_usage}.actual / ${cpu.system_cpu_usage}.actual)",
+            "0"
+          ],
+          "fqn": "netuitive.docker.cpu.container_cpu_percent",
+          "name": "Container CPU Percent"
+        }
+      }
+    ],
+    "name": "Docker Container",
+    "scope": {
+      "elementType": "Docker Container",
+      "metricMatches": "cpu.cpu_usage.total_usage"
+    },
+    "type": "COMPUTED_METRIC"
+  }
+}
+~

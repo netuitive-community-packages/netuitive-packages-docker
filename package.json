@@ -1,6 +1,6 @@
 {
   "id" : "netuitive.packages.docker",
-  "version" : "1.4.0",
+  "version" : "1.5.0",
   "manifest" : {
     "name" : "Netuitive Packages Docker",
     "description" : "A set of Netuitive analytics configurations, polices, dashboards, and reports that are used to monitor performance of Docker containers.",
@@ -49,7 +49,19 @@
     }
   }, {
     "data" : {
-      "file" : "analyticConfigurations/computed_metric-docker.container.json",
+      "file" : "analyticConfigurations/computed_metric-docker.cpu.container_cpu_percent.json",
+      "encoding" : "application/json",
+      "content" : null
+    }
+  }, {
+    "data" : {
+      "file" : "analyticConfigurations/computed_metric-docker.memory.container_memory_percent.json",
+      "encoding" : "application/json",
+      "content" : null
+    }
+  }, {
+    "data" : {
+      "file" : "analyticConfigurations/computed_metric-docker.cpu.container_throttling_percent.json",
       "encoding" : "application/json",
       "content" : null
     }

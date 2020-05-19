@@ -1,0 +1,23 @@
+{
+  "analyticConfiguration": {
+    "metrics": [
+      {
+        "match": "netuitive.docker.memory.container_memory_percent",
+        "properties": {
+          "expressions": [
+            "100 * (${memory.usage}.actual / ${memory.limit}.actual)",
+            "0"
+          ],
+          "fqn": "netuitive.docker.memory.container_memory_percent",
+          "name": "Container Memory Percent"
+        }
+      }
+    ],
+    "name": "Docker Container Memory Percent",
+    "scope": {
+      "elementType": "Docker Container",
+      "metricMatches": "memory.usage"
+    },
+    "type": "COMPUTED_METRIC"
+  }
+}

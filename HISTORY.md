@@ -2,6 +2,7 @@
 
 ### Version next
 
+* Bugfix: only compute container metrics when component metrics are available (non-minimal mode)
 * Convert single elementType to elementTypes array in policy scope
 
 ### Version 1.4.0
